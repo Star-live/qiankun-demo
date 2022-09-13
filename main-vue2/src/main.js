@@ -14,6 +14,24 @@ registerMicroApps([
     entry: '//localhost:8100',
     container: '#content',
     activeRule: '/vue2'
+  },
+  {
+    name: 'vue3',
+    entry: '//localhost:8200',
+    container: '#content',
+    activeRule: '/vue3'
+  },
+  {
+    name: 'react16',
+    entry: '//localhost:8300',
+    container: '#content',
+    activeRule: '/react16'
+  },
+  {
+    name: 'react17',
+    entry: '//localhost:8400',
+    container: '#content',
+    activeRule: '/react17'
   }
 ])
 // 启动qiankun

@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div id="base-app">
+    <div id="main-nav">
       <router-link to="/home">介绍</router-link>
       <router-link to="/vue2">vue2</router-link>
       <router-link to="/vue3">vue3</router-link>
@@ -28,7 +28,7 @@ body {
   height: 100vh;
   --theme: rgb(241, 107, 95);
 }
-#app {
+#base-app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +38,7 @@ body {
   flex-wrap: nowrap;
   width: 100vw;
 }
-#nav {
+#main-nav {
   background-color: white;
   font-size: 20px;
   position: relative;
@@ -54,7 +54,7 @@ body {
   flex-direction: column;
   flex-shrink: 0;
 }
-#nav a {
+#main-nav>a {
   display: flex;
   align-items: center;
   padding: 10px 30px;
@@ -64,11 +64,11 @@ body {
   transition: all 0.2s linear;
 }
 
-#nav a:hover {
+#main-nav>a:hover {
   color: rgb(241, 107, 95);
 }
 @media screen and (max-width: 768px) {
-  #nav {
+  #main-nav {
     position: absolute;
     box-shadow: none;
     transform: translate(-100%, 0);
@@ -80,13 +80,4 @@ body {
   overflow: hidden scroll;
   width: 1px;
 }
-
-#microapp-container {
-  flex: 1;
-  position: relative;
-  /* height: 100vh;
-  overflow: hidden scroll;
-  width: 1px; */
-}
-
 </style>
