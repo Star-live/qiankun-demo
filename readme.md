@@ -47,3 +47,13 @@ server {
 }
 ```
 
+### vue 2 项目修改配置项的方式
+
+本仓库中 vue 2 项目是使用命令 vue init webpack 创建的（参考 [Vue2项目搭建](https://blog.csdn.net/qq_24349695/article/details/90514900)）。
+
+该项目修改webpack配置可参考：[@vue cli-init 创建项目学习webpack配置](https://blog.csdn.net/shadowfall/article/details/120085183)
+
+vue.config.js配置不生效的原因见： [vue.config.js中的配置不生效](https://blog.csdn.net/qq_34370249/article/details/117744089)
+
+
+
