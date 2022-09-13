@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+const { name } = require('../package')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
@@ -20,11 +21,19 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
+  devServer: {
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    }
+  },
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
   },
   output: {
+    library: `${name}-[name]`,
+    libraryTarget: 'umd', // 把微应用打包成 umd 库格式
+    jsonpFunction: `webpackJsonp_${name}`,
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
